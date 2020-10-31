@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int first = Integer.parseInt(editText1.getText().toString());
                 int second = Integer.parseInt(editText2.getText().toString());
-              result.setText(first+second);
+              result.setText((first+second)+"");
 
             }
         });
