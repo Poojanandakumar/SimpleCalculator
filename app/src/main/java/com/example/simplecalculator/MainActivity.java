@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              result.setText( editText1.getText().toString() + editText2.getText().toString());
+                int first = Integer.parseInt(editText1.getText().toString());
+                int second = Integer.parseInt(editText2.getText().toString());
+              result.setText(first+second);
 
             }
         });
