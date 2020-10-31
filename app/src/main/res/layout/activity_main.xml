@@ -8,7 +8,7 @@
 
     <EditText
         android:inputType="number"
-        android:id="@+id/editText2"
+        android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="first number"
@@ -19,26 +19,27 @@
 
     <EditText
         android:inputType="number"
-        android:id="@+id/editText4"
+        android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Second number"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText1" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:id="@+id/add_button"
+        app:layout_constraintBottom_toTopOf="@+id/answerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/answerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
