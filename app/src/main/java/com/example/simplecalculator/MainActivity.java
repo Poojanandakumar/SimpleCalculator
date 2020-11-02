@@ -13,7 +13,9 @@ public class MainActivity extends AppCompatActivity {
     EditText editText1, editText2;
     Button addButton;
     TextView result;
-    Button addButton2;
+    Button subButton;
+    Button mulButton;
+    Button divbutton;
 
 
     @Override
@@ -24,25 +26,48 @@ public class MainActivity extends AppCompatActivity {
         editText1 = findViewById(R.id.editText1);
         editText2 = findViewById(R.id.editText2);
         addButton = findViewById(R.id.add_button);
-        addButton2 = findViewById(R.id.add_button2);
+        subButton = findViewById(R.id.sub_button);
+        mulButton = findViewById(R.id.mul_button);
+        divbutton = findViewById(R.id.div_button);
         result = findViewById(R.id.answerView);
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int first = Integer.parseInt(editText1.getText().toString());
-                int second = Integer.parseInt(editText2.getText().toString());
+                float first = Float.parseFloat(editText1.getText().toString());
+                float second = Float.parseFloat(editText2.getText().toString());
               result.setText((first+second)+"");
 
             }
         });
 
-        addButton2.setOnClickListener(new View.OnClickListener() {
+        subButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int first = Integer.parseInt(editText1.getText().toString());
-                int second = Integer.parseInt(editText1.getText().toString());
+                float first =Float.parseFloat(editText1.getText().toString());
+                float second = Float.parseFloat(editText2.getText().toString());
                 result.setText((first-second)+"");
+            }
+
+        });
+
+        mulButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float first =Float.parseFloat(editText1.getText().toString());
+                float second = Float.parseFloat(editText2.getText().toString());
+                result.setText((first*second)+"");
+            }
+
+        });
+
+        divbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float first =Float.parseFloat(editText1.getText().toString());
+                float second = Float.parseFloat(editText2.getText().toString());
+                result.setText((first/second)+"");
+            }
 
         });
 
