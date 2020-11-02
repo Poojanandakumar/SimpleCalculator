@@ -66,7 +66,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 float first =Float.parseFloat(editText1.getText().toString());
                 float second = Float.parseFloat(editText2.getText().toString());
-                result.setText((first/second)+"");
+                if(second==0) {
+                    result.setText("Undefined");
+                }
+                else {
+                    result.setText((first / second) + "");
+                }
             }
 
         });
