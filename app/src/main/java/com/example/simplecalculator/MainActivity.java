@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText1, editText2;
     Button addButton;
     TextView result;
+    Button addButton2;
 
 
     @Override
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         editText1 = findViewById(R.id.editText1);
         editText2 = findViewById(R.id.editText2);
         addButton = findViewById(R.id.add_button);
+        addButton2 = findViewById(R.id.add_button2);
         result = findViewById(R.id.answerView);
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
               result.setText((first+second)+"");
 
             }
+        });
+
+        addButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int first = Integer.parseInt(editText1.getText().toString());
+                int second = Integer.parseInt(editText1.getText().toString());
+                result.setText((first-second)+"");
+
         });
 
 
